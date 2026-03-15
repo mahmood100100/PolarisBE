@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+            .header h1 {
+                margin: 0;
+                font-size: 28px;
+            }
+
+        .content {
+            background: #f9f9f9;
+            padding: 40px 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 35px;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 16px;
+            margin: 20px 0;
+            cursor: pointer;
+            border: none;
+        }
+
+            .button:hover {
+                background: #45a049;
+            }
+
+        .email-box {
+            background: #e8f5e9;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 4px solid #4CAF50;
+        }
+
+        .footer {
+            background: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .note {
+            color: #888;
+            font-size: 13px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class='container'>
+        <div class='header'>
+            <h1>✅ Confirm Your Email</h1>
+        </div>
+        <div class='content'>
+            <h2>Hello {{name}}!</h2>
+            <p>Thank you for registering with <strong>Polaris</strong>. Please confirm your email address to activate your account.</p>
+
+            <div class='email-box'>
+                <strong>Email:</strong> {{email}}
+            </div>
+
+            <div style='text-align: center;'>
+                <a href='{{confirmationLink}}' class='button'>Confirm Email</a>
+            </div>
+
+            <p class='note'>This link will expire in 24 hours.</p>
+            <p class='note'>If you didn't create this account, please ignore this email.</p>
+        </div>
+        <div class='footer'>
+            <p>&copy; {{year}} Polaris. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

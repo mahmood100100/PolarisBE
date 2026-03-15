@@ -1,0 +1,6 @@
+@Polaris.WebAPI_HostAddress = http://localhost:5128
+
+GET {{Polaris.WebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
