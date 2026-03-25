@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Channels;
 using System.Threading.Tasks;
+using static Dapper.SqlMapper;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Polaris.Infrastructure.Data
@@ -23,6 +24,7 @@ namespace Polaris.Infrastructure.Data
         public DbSet<Conversation> Conversations { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<ProjectFile> ProjectFiles { get; set; }
+        public DbSet<GenerationJob> GenerationJobs { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -88,6 +90,21 @@ namespace Polaris.Infrastructure.Data
 
                 // Improving code storage in Postgres
                 entity.Property(f => f.Content).HasColumnType("text");
+            });
+            // 6. LocalUser - GenerationJob (One-to-Many)
+            modelBuilder.Entity<GenerationJob>(entity =>
+            {
+                entity.ToTable("GenerationJobs");
+                entity.HasKey(e => e.Id);
+
+                entity.HasOne<LocalUser>()
+                      .WithMany()
+                      .HasForeignKey(e => e.UserId)
+                      .IsRequired()
+                      .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasIndex(e => e.UserId);
+                entity.HasIndex(e => e.Status);
             });
         }
     }

@@ -1,7 +1,9 @@
+using Hangfire;
 using Microsoft.AspNetCore.CookiePolicy;
 using Polaris.Application;
 using Polaris.Infrastructure;
 using Polaris.Infrastructure.Data;
+using Polaris.Infrastructure.Services;
 
 namespace Polaris.WebAPI
 {
@@ -71,6 +73,11 @@ namespace Polaris.WebAPI
 
             app.UseHttpsRedirection();
             app.UseCors("AllowFrontend");
+
+            app.UseHangfireDashboard("/hangfire", new DashboardOptions
+            {
+                Authorization = new[] { new HangfireAuthorizationFilter() }
+            });
 
             app.UseAuthentication();
             app.UseAuthorization();

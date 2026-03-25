@@ -1,0 +1,18 @@
+﻿  Determining projects to restore...
+C:\Users\alyamen.ps\source\repos\Polaris\Polaris.Application\Polaris.Application.csproj : warning NU1903: Package 'AutoMapper' 12.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-rvv3-g6hj-g44x
+  All projects are up-to-date for restore.
+C:\Users\alyamen.ps\source\repos\Polaris\Polaris.Application\Polaris.Application.csproj : warning NU1903: Package 'AutoMapper' 12.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-rvv3-g6hj-g44x
+  Polaris.Domain -> C:\Users\alyamen.ps\source\repos\Polaris\Polaris.Domain\bin\Debug\net8.0\Polaris.Domain.dll
+C:\Users\alyamen.ps\source\repos\Polaris\Polaris.Application\Features\GenerateCode\Queries\CheckHangfireJob\CheckHangfireJobQueryHandler.cs(12,26): error CS0246: The type or namespace name 'IBackgroundJobClient' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\alyamen.ps\source\repos\Polaris\Polaris.Application\Polaris.Application.csproj]
+C:\Users\alyamen.ps\source\repos\Polaris\Polaris.Application\Features\GenerateCode\Queries\CheckHangfireJob\CheckHangfireJobQueryHandler.cs(16,13): error CS0246: The type or namespace name 'IBackgroundJobClient' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\alyamen.ps\source\repos\Polaris\Polaris.Application\Polaris.Application.csproj]
+
+Build FAILED.
+
+C:\Users\alyamen.ps\source\repos\Polaris\Polaris.Application\Polaris.Application.csproj : warning NU1903: Package 'AutoMapper' 12.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-rvv3-g6hj-g44x
+C:\Users\alyamen.ps\source\repos\Polaris\Polaris.Application\Polaris.Application.csproj : warning NU1903: Package 'AutoMapper' 12.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-rvv3-g6hj-g44x
+C:\Users\alyamen.ps\source\repos\Polaris\Polaris.Application\Features\GenerateCode\Queries\CheckHangfireJob\CheckHangfireJobQueryHandler.cs(12,26): error CS0246: The type or namespace name 'IBackgroundJobClient' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\alyamen.ps\source\repos\Polaris\Polaris.Application\Polaris.Application.csproj]
+C:\Users\alyamen.ps\source\repos\Polaris\Polaris.Application\Features\GenerateCode\Queries\CheckHangfireJob\CheckHangfireJobQueryHandler.cs(16,13): error CS0246: The type or namespace name 'IBackgroundJobClient' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\alyamen.ps\source\repos\Polaris\Polaris.Application\Polaris.Application.csproj]
+    2 Warning(s)
+    2 Error(s)
+
+Time Elapsed 00:00:01.21
